@@ -1,0 +1,32 @@
+{
+    "c file structure": {
+		"prefix": "cfile",
+		"body": [
+			"/**",
+            " * @file $TM_FILENAME",
+            " * @author Joshua Lauterbach (joshua@aconno.de)",
+            " * @brief $1",
+            " * @version $2",
+            " * @date $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+            " * ",
+            " * @copyright Aconno GmbH (c) $CURRENT_YEAR",
+            " * ",
+            " */",
+            "",
+            "//--------------------------------- INCLUDES ----------------------------------",
+            "",
+            "//-------------------------------- CONSTANTS ----------------------------------",
+            "",
+            "//--------------------------- STRUCTS AND ENUMS -------------------------------",
+            "",
+            "//------------------------------- PROTOTYPES ----------------------------------",
+            "",
+            "//---------------------------- STATIC VARIABLES -------------------------------",
+            "",
+            "//----------------------------- EXPOSED FUNCTIONS -----------------------------",
+            "$0",
+            "//---------------------------- STATIC FUNCTIONS -------------------------------"
+        ],
+		"description": "Basic file structure"
+	}
+}
