@@ -28,5 +28,50 @@
             "//---------------------------- STATIC FUNCTIONS -------------------------------"
         ],
 		"description": "Basic file structure"
-	}
+    },
+    "h file structure": {
+		"prefix": "hfile",
+		"body": [
+			"/**",
+            " * @file $TM_FILENAME",
+            " * @author Joshua Lauterbach (joshua@aconno.de)",
+            " * @brief $1",
+            " * @version $2",
+            " * @date $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+            " * ",
+            " * @copyright Aconno GmbH (c) $CURRENT_YEAR",
+            " * ",
+            " */",
+            "",
+            "#ifndef __${TM_FILENAME/[\\.-]/_/g}__",
+            "#define __${TM_FILENAME/[\\.-]/_/g}__",
+            "",
+            "//--------------------------------- INCLUDES ----------------------------------",
+            "",
+            "//--------------------------- STRUCTS AND ENUMS -------------------------------",
+            "",
+            "//-------------------------------- CONSTANTS ----------------------------------",
+            "",
+            "//---------------------------- GLOBAL VARIABLES -------------------------------",
+            "",
+            "//----------------------------- EXPOSED FUNCTIONS -----------------------------",
+            "$0",
+            "",
+            "#endif //__${TM_FILENAME/[\\.-]/_/g}__",
+        ],
+		"description": "Basic file structure"
+    },
+    "ESP error check": {
+		"prefix": "espcheckerror",
+		"body": [
+            "$1 = $2",
+            "if ($1 != ESP_OK)",
+            "{",
+            "   $0",
+            "   ESP_LOGE(TAG, \"$3\");",
+            "   return $1",
+            "}",
+        ],
+		"description": "runs a function that returns esp_err_t and checks for error"
+	},
 }
